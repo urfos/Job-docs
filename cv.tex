@@ -1,0 +1,326 @@
+\documentclass[letterpaper,11pt]{article}
+\newlength{\outerbordwidth}
+\pagestyle{empty}
+\raggedbottom
+\raggedright
+\usepackage[svgnames]{xcolor}
+\usepackage{framed,tabularx,array}
+\usepackage{tocloft}
+\usepackage[hidelinks]{hyperref}
+\usepackage{hyperref}
+
+
+%-----------------------------------------------------------
+%Edit these values as you see fit
+
+\setlength{\outerbordwidth}{3pt}  % Width of border outside of title bars
+\definecolor{shadecolor}{gray}{0.75}  % Outer background color of title bars (0 = black, 1 = white)
+\definecolor{shadecolorB}{gray}{0.93}  % Inner background color of title bars
+
+
+%-----------------------------------------------------------
+%Margin setup
+
+\setlength{\evensidemargin}{-0.25in}
+\setlength{\headheight}{0in}
+\setlength{\headsep}{0in}
+\setlength{\oddsidemargin}{-0.25in}
+\setlength{\paperheight}{11in}
+\setlength{\paperwidth}{8.5in}
+\setlength{\tabcolsep}{0in}
+\setlength{\textheight}{9.5in}
+\setlength{\textwidth}{7in}
+\setlength{\topmargin}{-0.3in}
+\setlength{\topskip}{0in}
+\setlength{\voffset}{0.1in}
+
+
+%-----------------------------------------------------------
+%Custom commands
+
+\newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
+\newcommand{\resheading}[1]{\filbreak % Ilya: this prevents blocks from splitting across pages
+  \vspace{8pt}
+  \parbox{\textwidth}{\setlength{\FrameSep}{\outerbordwidth}
+    \begin{shaded}
+\setlength{\fboxsep}{0pt}\framebox[\textwidth][l]{\setlength{\fboxsep}{4pt}\fcolorbox{shadecolorB}{shadecolorB}{\textbf{\sffamily{\mbox{~}\makebox[6.762in][l]{\large #1} \vphantom{p\^{E}}}}}}
+    \end{shaded}
+  }\vspace{-5pt}
+}
+\newcommand{\ressubheading}[4]{
+\begin{tabularx}{6.5in}{X<{\cftdotfill{\cftsecdotsep}}@{}r}
+  \textbf{#1} & #2 \\
+  \textit{#3} & \textit{#4} \\
+\end{tabularx}\vspace{-6pt}}
+
+\newcommand{\ilyaheading}[2]{
+\begin{tabularx}{6.5in}{X<{\cftdotfill{\cftsecdotsep}}@{}r}
+  #1& #2 \\
+\end{tabularx}\vspace{-6pt}}
+%-----------------------------------------------------------
+
+%-----------------------------------------------------------
+%Edit these values as you see fit
+
+\setlength{\outerbordwidth}{3pt}  % Width of border outside of title bars
+\definecolor{shadecolor}{gray}{0.75}  % Outer background color of title bars (0 = black, 1 = white)
+\definecolor{shadecolorB}{gray}{0.93}  % Inner background color of title bars
+
+
+%-----------------------------------------------------------
+%Margin setup
+
+\setlength{\evensidemargin}{-0.25in}
+\setlength{\headheight}{0in}
+\setlength{\headsep}{0in}
+\setlength{\oddsidemargin}{-0.25in}
+\setlength{\paperheight}{11in}
+\setlength{\paperwidth}{8.5in}
+\setlength{\tabcolsep}{0in}
+\setlength{\textheight}{9.5in}
+\setlength{\textwidth}{7in}
+\setlength{\topmargin}{-0.3in}
+\setlength{\topskip}{0in}
+\setlength{\voffset}{0.1in}
+%-----------------------------------------------------------
+
+\begin{document}
+
+\begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
+\textbf{\Large Ilya Eryzhenskiy} & \\%\textbf{updated on \today} \\
+Researcher \href{mailto:ilya.eryzh@gmail.com}{\underline{ilya.eryzh@gmail.com}} & Born: January 18, 1992 \\
+CIRED: 45bis Av. de la Belle Gabrielle, 94130 Nogent-sur-Marne, France & %Citizenship: Russian Federation
+\end{tabular*}
+\\
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Positions}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{itemize}
+
+  \item \ressubheading{Ecole des Ponts ParisTech \& CIRED}{Paris, France}{Postdoctoral researcher}{2021 -- 2024}
+    \begin{itemize}
+		\resitem{Climate risk pricing in housing loans (ADEME ClimFi grant -- project BALOCLI)}
+		\resitem{Zero Interest Green Loan impact evaluation (ADEME ClimFi grant -- project FRITE)}
+    \end{itemize}
+%  \item \ressubheading{ESCP Europe}{Paris, France}{Part-time lecturer}{2020-21, 2021-22}
+%    \begin{itemize}
+%		\resitem{Monetary economics}
+%    \end{itemize}
+    \item \ressubheading{University Paris-1 Panthéon-Sorbonne}{Paris, France}{Full-time lecturer (ATER)}{2018 -- 2020}
+    \begin{itemize}
+		\resitem{International macroeconomics, Monetary economics, Econometrics, Mathematics}
+    \end{itemize}
+    
+    %\item \ressubheading{PROFI.ru}{Moscow, Russia}{Part-time}{2012 -- 2017}
+    %\begin{itemize}
+    %	\resitem{Private lessons in economics, mathematics, statistics; in Russian, English and French.}
+    %\end{itemize}
+    
+    \item \ressubheading{Wolters Kluwer Russia}{Moscow, Russia}{Full-time internship}{2010}
+    \begin{itemize}
+    	\resitem{Financial analysis}
+    \end{itemize}
+\end{itemize}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Education}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}	
+	\item \ressubheading{Paris School of Economics}{France}{Ph.D.}{2015--2021} 
+    \begin{itemize}
+		\resitem{Thesis ``Household Credit: Constraints, Regulation and Macroeconomic Implications'' defended on February 24, 2021.}
+		\resitem{Supervisor: Bertrand Wigniolle, thesis commitee: Hippolyte D'Albis.}
+    \end{itemize}
+  \item \ressubheading{European Doctorate in Economics -- Erasmus Mundus}{France-Germany}{Ph.D.}{2015--2021}
+	\begin{itemize}
+        \resitem{University Paris-1 Panthéon-Sorbonne (primary); Bielefeld University (secondary)}
+		\resitem{Co-supervisor: Alfred Greiner. Thesis graded \emph{summa cum laude} in Bielefeld University.}
+	\end{itemize}
+
+  \item \ressubheading{Paris School of Economics -- University Paris-1 Panthéon-Sorbonne}{France}{M.Sc. (Master 2 Recherche)}{2014--2015}
+%    \begin{itemize}
+%    	\resitem{Empirical \& Theoretical Economics (APE at present)}
+%    \end{itemize}
+    
+  \item \ressubheading{National Research University -- Higher School of Economics (HSE)}{Russia}{B.Sc., M.Sc.}{2009--2015}
+%    
+%    \begin{itemize}
+%    	\resitem{Specialization: Macroeconomic modelling and macroeconomic policy}
+%    \end{itemize}
+
+\end{itemize}
+
+\resheading{Additional training}
+
+\begin{itemize}
+         \item \ressubheading{Summer school on Banking}{University Pompeu Fabra}{Subjects: Banking Regulation ; Microeconometrics of Banking}{2019}
+\end{itemize}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Research Interests}
+\begin{enumerate}
+	\resitem{\textbf{Household finance}: savings, personal bankruptcy, housing.}
+	\resitem{\textbf{Banking}: lending, stability.}
+	\resitem{\textbf{Macroeconomic dynamics}: multiple equilibria, bubbles.}
+\end{enumerate}
+
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Work in progress}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{enumerate}
+	\resitem{Intergenerational Redistribution with Endogenous Constraints to Private Debt. \textit{R \& R, Journal of Mathematical Economics}}
+	\resitem{Zero-Interest Green Loans and Home Energy Retrofits: Evidence from France (with L-G. Giraudet, M. Seg\`{u}) \textit{Submitted}, WP version: \url{https://hal-enpc.archives-ouvertes.fr/hal-03585110}}
+	\resitem{Climate risks in the housing sector and housing loan pricing: Evidence from France}
+	\resitem{Retrofit Subsidy and Residential Gas Consumption: Impact Evaluation of Local Program in Paris Region}
+	\resitem{Interest Rate Restriction Results in Shorter Housing Loans: Evidence from France}
+	\resitem{Endogenous Debt Constraints and Rational Bubbles in an OLG Growth Model (with B. Wigniolle)} %-- \textit{submitted}
+	%\resitem{Taming the Collectors: Debt Collection Regulation and Household Well-Being in Russia}
+	%\resitem{AI and Financial Intermediation Under Stress: Evidence from Covid-19 Lending in France (with S. Ouerk, V. Saadi, F. Ravasan)}
+    \end{enumerate}
+
+\resheading{Teaching experience}
+\textbf{Lecturer:} Macroeconomics (Paris--1, M1, fall 2023, fall 2022); 
+Monetary economics (ESCP Europe, Pre-master, spring 2021, spring 2022); \\
+\textbf{Teaching assistant:} Project in econometrics (Paris Sciences et Lettres, Bachelor, spring 2023); 
+Introduction to Econometrics (Paris--1, Bachelor -- Fall 2020);
+Linear Algebra and Multivariate Calculus (Paris--1, Bachelor -- Spring 2019);
+Open Macroeconomics (Paris--1, M1, Fall 2017, 2018, 2019);
+International Monetary Macroeconomics (Paris--1, M1, Spring 2016, 2019, 2020);
+Microeconomics, Macroeconomics tutorials (Paris--1, M1, Fall 2015)
+%\begin{itemize}
+%         \item \ressubheading{Macroeconomics}{Paris-1}{Master-1}{2022/23}
+%         \item \ressubheading{Monetary Economics}{ESCP Europe}{Pre-master}{2020/21, 2021/22}
+%         \item \ressubheading{Introduction to Econometrics}{Paris--1}{2nd year bachelor}{2019/20}
+%        \item \ressubheading{Linear Algebra and Multivariate Calculus}{Paris--1}{2nd year bachelor}{2018/19}
+%        \item \ressubheading{Open Macroeconomics}{Paris--1}{Master 1}{2017/18, 2018/19, 2019/20}
+%        \item \ressubheading{International Monetary Macroeconomics}{Paris--1}{3rd year bachelor}{2015/16, 2018/19, 2019/20}
+%        \item \ressubheading{Microeconomics, Macroeconomics tutorials}{Paris--1}{Master 1}{2015/16}
+%\end{itemize}
+
+ \resheading{Talks}
+  Atlantic Workshop on Energy and Environmental Economics (Isla De la Toja, June 2022);
+ Applied Microeconomics Workshop (Rennes, 2022);
+ International Symposium on Energy and Finance Issues (Paris 2022);
+ Mannheim Mannheim Conference on Energy and the Environment (Mannheim, 2022);
+ PSAE Agro ParisTech Seminar (Paris 2022);
+ French Association for Environmental Economics (Grenoble, 2021); International Symposium on Money, Credit and Banking at Banque de France (Paris, 2021); Financial and Real Interdependencies Conference (Marseille, 2019); International Macroeconomics Workshop of Fondation Banque de France (Paris,  2018); Public Economic Theory -- PET (Hue, 2018);
+     XVIII April Conference of HSE (Moscow, Russia, 2017);
+       OLG Days (Luxembourg, 2016);
+         Public Economic Theory -- PET (Rio de Janeiro,  2016)
+         %; Russian Reporter's Summer School (Moscow, 2015)
+
+\resheading{IT skills}
+
+    \textbf{General}: Windows, Mac OS, Linux Debian, MS Office; \\
+	\textbf{Scientific, data} (descending proficiency): R, Python, Matlab, Stata,  QGIS, Mathematica, SAS; \\
+	\textbf{Programming}:  Python, bash, C, git; \\
+    \textbf{Presentation}: \LaTeX, Markdown, Jupyter, pandoc, Photoshop, audio/video editing. 
+
+\resheading{Languages}
+
+\textbf{English}: Advanced, IELTS Academic 7.5 (2012); \\ \textbf{French}: Advanced, DFP Affaires B2 (2013); \\ \textbf{German}: Intermediate, DAF B1 (2017); \\ \textbf{Russian}: native. 
+
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Awards, Grants, misc.}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+  \item \ilyaheading{Policy evaluation grant of regional council of Essonne -- contributor  to project proposal \\ with L-G. Giraudet and SMASH}{2023} 
+  \item \ilyaheading{ADEME ClimFi (Climate Finance) research grant -- contributor to grant application \\ 3-year project BALOCLI (Banks, Housing and Climate), with L-G. Giraudet}{2022-2024} 
+  %\item \ilyaheading{ADEME ClimFi grant FRITE -- post-doctoral researcher}{2021-2022}
+  %\item \ilyaheading{Research grant from Paris Laboratory of Experimental Economics (suspended)}{2016}
+  \item \ilyaheading{Erasmus Mundus Doctorate (EDEEM) Fellowship}{2015}
+  \item \ilyaheading{Russian state medal of excellence in secondary education}{2009}
+\end{itemize}
+%	\multicolumn{2}{c}{Erasmus Mundus Doctorate (EDEEM) Fellowship \cftdotfill{\cftdotsep} 2015}\\
+		%\multicolumn{2}{c}{Medal of excellence in secondary education \cftdotfill{\cftdotsep} 2009}\\		
+\vspace{10 pt}
+
+\textbf{Hobbies:} Music: improvisation and composition; martial arts.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \resheading{Current projects description}
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\textbf{Interest Rate Restriction Results in Shorter Housing Loans: Evidence from France.} \\
+%I study the impact of interest rate restrictions on the composition of new residential real estate loans in France. A reform     in 2017 have introduced a dedicated interest rate ceiling for long-term loans of 20 years and more. Using the M\_CONTRAN dataset on loan originations from Banque de France, I find that the composition of housing loan originations has shifted towards longer loans --- this holds on aggregate, on a lender a level and on a branch level. The dedicated ceiling for long-term loans is estimated to have led to a $6.4\%$ increase in quarterly housing loan origination, including refinancing. This has improved the average borrower liquidity at a cost of significant increase in overall debt service cost.
+%
+% \vspace{10pt}
+%
+% \textbf{Endogenous Borrowing Constraints and Rational Bubbles in an OLG Growth Model} (with B.Wigniolle)
+%
+% Personal bankruptcy systems may favor strategic default on unsecured consumer debt. We study a growing overlapping generations
+% economy where young agents have a limited commitment to repay
+% debts, because personal bankruptcy is available. Incentives to default are determined endogenously by several dynamic variables. First, the expected
+% profile of future wages and interest rates. Second, availability of, and
+% return on an informal asset without intrinsic value --- a pure bubble.
+% In economies without bubbles, endogenous borrowing constraints rule
+% out incentives for strategic default and default does not take place, in
+% line with the limited commitment literature. We show this type of
+% equilibrium is always a saddle path, and borrowing constraints are
+% binding either for all or for no generation. In economies with bubbles,
+% an endogenous share of borrowers default, are excluded from financial markets and use the bubbly asset for saving. The default
+% risk is priced by higher interest rates. Equilibria with bubbles are always indeterminate, and a
+% steady-state with nonzero default rate and a permanent bubble can
+% exist, even in economies without capital over-accumulation. 
+% \\
+% \vspace{10pt}
+%  \textbf{Intergenerational Redistribution with Endogenous Constraints to Private Debt}\\
+%I study decentralization of optimal consumption allocations in an endowment OLG economy where private agents face endogenous borrowing constraints due to limited commitment. The social planner can use lump-sum transfers and government debt. I show that policies using government debt have more flexibility in decentralizing optimal allocations, as opposed to balanced-budget policies with the same number of instruments. In addition, government debt rules out suboptimal equilibria where private credit market does not operate. Both of these positive effects are due to an increase of interest rates associated with the use of government debt. A comparison to common models with exogenous borrowing constraints shows that the results are entirely due to agents'\ incentives to debt repayment under limited commitment.
+% \\
+% \vspace{10pt}
+% \textbf{Taming the Collectors: Debt Collection Regulation and Consumer Well-Being in Russia}
+%
+% Consumer credit can be costly in non-monetary terms if debt collection is involved. In case of loose legal protection of borrower rights, consumers might experience aggression and threats when dealing with formal and informal debt collection institutions. I study the impact of a major reform of debt collection regulation on borrowers' well-being in Russia. The reform has expanded borrower rights in their interactions with collectors. I implement a difference-in-difference strategy with an annual household survey data where the treatment group is defined by having unsecured consumer debts at the time of the reform announcement. Several self-reported proxies for household for well-being are used as outcome variables. I find that alcohol and tobacco consumption decrease for two years following the reform.         
+\resheading{References}
+~ \\
+~ \\
+~ \\
+\begin{tabular}{lr}
+% Referee 1
+$\bullet$ \begin{minipage}[t]{0.45\textwidth}
+Prof.\ Bertrand Wigniolle\\
+Paris Schoool of Economics\\
+48 boulevard Jourdan\\
+Paris 75014\\
+\href{mailto:Bertrand.Wigniolle@univ-paris1.fr}{bertrand.wigniolle@univ-paris1.fr}
+\end{minipage}
+& \hspace{4cm}
+% Referee 2
+$\bullet$ \begin{minipage}[t]{0.45\textwidth}
+Prof.\ Hyppolyte D'Albis\\
+Paris Schoool of Economics\\
+48 boulevard Jourdan\\
+Paris 75014\\
+\href{mailto:hippolyte.dalbis@psemail.eu}{hippolyte.dalbis@psemail.eu}
+\end{minipage}
+\\ &
+\\ &
+\\ & 
+\\
+$\bullet$ \begin{minipage}[t]{0.45\textwidth}
+Louis-Ga\"{e}tan Giraudet\\
+Ecole des Ponts ParisTech, CIRED\\
+45bis Av. de la Belle Gabrielle \\ 94130 Nogent-sur-Marne \\
+\href{mailto:louis-gaetan.giraudet@enpc.fr}{louis-gaetan.giraudet@enpc.fr}
+\end{minipage}
+& \hfill
+$\bullet$ \begin{minipage}[t]{0.45\textwidth}
+Mariona Seg\'{u}\\
+CY Cergy Paris Universit\'{e}  \\33 Bd du Port \\95000 Cergy\\
+\href{mailto:mariona.segu@cyu.fr}{mariona.segu@cyu.fr}
+\end{minipage}
+\end{tabular}
+
+
+\end{document}
