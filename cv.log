@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2018.1.22)  14 DEC 2023 16:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2018.1.22)  14 DEC 2023 16:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -295,12 +295,8 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 89.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 89.
-
-Overfull \hbox (98.47441pt too wide) in alignment at lines 89--93
-[] [] 
- []
-
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 102.
+
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
@@ -354,7 +350,7 @@ usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr
 r/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr
 /local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/
 local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on cv.pdf (3 pages, 117087 bytes).
+Output written on cv.pdf (3 pages, 117050 bytes).
 PDF statistics:
  71 PDF objects out of 1000 (max. 8388607)
  57 compressed objects within 1 object stream
