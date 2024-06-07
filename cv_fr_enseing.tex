@@ -1,4 +1,7 @@
 \documentclass[letterpaper,11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}                     
+\usepackage[frenchb]{babel}
 \newlength{\outerbordwidth}
 \pagestyle{empty}
 \raggedbottom
@@ -7,7 +10,6 @@
 \usepackage{framed,tabularx,array}
 \usepackage{tocloft}
 \usepackage[hidelinks]{hyperref}
-\usepackage{hyperref}
 
 
 %-----------------------------------------------------------
@@ -37,10 +39,8 @@
 
 %-----------------------------------------------------------
 %Custom commands
-
-\newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
-\newcommand{\resheading}[1]{\filbreak % Ilya: this prevents blocks from splitting across pages
-  \vspace{8pt}
+\newcommand{\resitem}[1]{\item #1 \vspace{2pt}}
+\newcommand{\resheading}[1]{\vspace{8pt}
   \parbox{\textwidth}{\setlength{\FrameSep}{\outerbordwidth}
     \begin{shaded}
 \setlength{\fboxsep}{0pt}\framebox[\textwidth][l]{\setlength{\fboxsep}{4pt}\fcolorbox{shadecolorB}{shadecolorB}{\textbf{\sffamily{\mbox{~}\makebox[6.762in][l]{\large #1} \vphantom{p\^{E}}}}}}
@@ -51,9 +51,9 @@
 \begin{tabularx}{6.5in}{X<{\cftdotfill{\cftsecdotsep}}@{}r}
   \textbf{#1} & #2 \\
   \textit{#3} & \textit{#4} \\
-\end{tabularx}\vspace{-6pt}}
+\end{tabularx}\vspace{2pt}}
 
-\newcommand{\ilyaheading}[2]{
+\newcommand{\ilyaheading}[2]{\vspace{8pt}
 \begin{tabularx}{6.5in}{X<{\cftdotfill{\cftsecdotsep}}@{}r}
   #1& #2 \\
 \end{tabularx}\vspace{-6pt}}
@@ -82,35 +82,35 @@
 \setlength{\topmargin}{-0.3in}
 \setlength{\topskip}{0in}
 \setlength{\voffset}{0.1in}
+
 %-----------------------------------------------------------
 
 \begin{document}
 
 \begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
-\textbf{\Large Ilya Eryzhenskiy} & \\%\textbf{updated on \today} \\
-Researcher \href{mailto:ilya.eryzh@gmail.com}{\underline{ilya.eryzh@gmail.com}} & \\ % Born: January 18, 1992 \\
-Ecole des Ponts ParisTech / CIRED: 45bis Av. de la Belle Gabrielle, 94130 Nogent-sur-Marne, France & %Citizenship: Russian Federation
+\textbf{\Large Ilya Eryzhenskiy} & \textbf{mis à jour : \today} \\
+Chercheur \href{mailto:ilya.eryzh@gmail.com}{\underline{ilya.eryzh@gmail.com}} & N\'{e} le 18 janvier, 1992 \\
+CIRED: 45bis Av. de la Belle Gabrielle, 94130 Nogent-sur-Marne, France & %Citizenship: Russian Federation
 \end{tabular*}
 \\
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \resheading{Positions}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{itemize}
 
-  \item \ressubheading{Ecole des Ponts ParisTech \& CIRED}{Paris, France}{Postdoctoral researcher}{2021 -- 2024}
+  \item \ressubheading{Ecole des Ponts ParisTech \& CIRED}{Paris, France}{chercheur post-doctorant}{2021/05 -- pr\'{e}sent}
     \begin{itemize}
-		\resitem{Climate risk pricing in housing loans (ADEME ClimFi grant -- project BALOCLI)}
-		\resitem{Zero Interest Green Loan impact evaluation (ADEME ClimFi grant -- project FRITE)}
+		\resitem{Risques climatiques et cr\'{e}dit immobilier  ; Eco-Pr\^{e}t \`{a} Taux Z\'{e}ro (EPTZ) et le syst\`{e}me bancaire (ADEME ClimFi -- project Balocli)}
+		\resitem{\'{e}valuation d'impact de l'EPTZ (ADEME ClimFi grant -- project FRITE)}
     \end{itemize}
 %  \item \ressubheading{ESCP Europe}{Paris, France}{Part-time lecturer}{2020-21, 2021-22}
 %    \begin{itemize}
 %		\resitem{Monetary economics}
 %    \end{itemize}
-    \item \ressubheading{University Paris-1 Panthéon-Sorbonne}{Paris, France}{Full-time lecturer (ATER)}{2018 -- 2020}
+  \item \ressubheading{University Paris-1 Panthéon-Sorbonne}{Paris, France}{ATER \`{a} temps plein}{2018 -- 2020}
     \begin{itemize}
-		\resitem{International macroeconomics, Monetary economics, Econometrics, Mathematics}
+		\resitem{\'{E}conomie internationale, Macroéconomie, \'{E}conométrie, Mathématiques}
     \end{itemize}
     
     %\item \ressubheading{PROFI.ru}{Moscow, Russia}{Part-time}{2012 -- 2017}
@@ -118,35 +118,35 @@ Ecole des Ponts ParisTech / CIRED: 45bis Av. de la Belle Gabrielle, 94130 Nogent
     %	\resitem{Private lessons in economics, mathematics, statistics; in Russian, English and French.}
     %\end{itemize}
     
-    \item \ressubheading{Wolters Kluwer Russia}{Moscow, Russia}{Full-time internship}{2010}
-    \begin{itemize}
-    	\resitem{Financial analysis}
-    \end{itemize}
+    %\item \ressubheading{Wolters Kluwer Russia}{Moscow, Russia}{Full-time internship}{2010}
+    %\begin{itemize}
+    %	\resitem{Financial analysis}
+    %\end{itemize}
 \end{itemize}
 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\resheading{Education}
+\resheading{Formation}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{itemize}	
-	\item \ressubheading{Paris School of Economics}{France}{Ph.D.}{2015--2021} 
+	\item \ressubheading{École d'Économie de Paris}{France}{doctorat}{2015--2021} 
     \begin{itemize}
-		\resitem{Thesis ``Household Credit: Constraints, Regulation and Macroeconomic Implications'' defended on February 24, 2021.}
-		\resitem{Supervisor: Bertrand Wigniolle, thesis commitee: Hippolyte D'Albis.}
+		\resitem{Thèse ``Crédit aux ménages : contraintes, régulation et implications macroéconomiques'' soutenue le  24 février, 2021.}
+		\resitem{Encadrant : Bertrand Wigniolle.}
     \end{itemize}
-  \item \ressubheading{European Doctorate in Economics -- Erasmus Mundus}{France-Germany}{Ph.D.}{2015--2021}
+  \item \ressubheading{European Doctorate in Economics -- Erasmus Mundus}{France-Allemagne}{doctorat}{2015--2021}
 	\begin{itemize}
-        \resitem{University Paris-1 Panthéon-Sorbonne (primary); Bielefeld University (secondary)}
-		\resitem{Co-supervisor: Alfred Greiner. Thesis graded \emph{summa cum laude} in Bielefeld University.}
+        \resitem{Université Paris-1 Panthéon-Sorbonne (principal); Université de Bielefeld (secondaire)}
+		\resitem{Co-superviseur : Alfred Greiner. Grade \emph{summa cum laude} \`{a} l'université de Bielefeld.}
 	\end{itemize}
 
-  \item \ressubheading{Paris School of Economics -- University Paris-1 Panthéon-Sorbonne}{France}{M.Sc. (Master 2 Recherche)}{2014--2015}
+  \item \ressubheading{École d'Économie de Paris -- Université Paris-1 Panthéon-Sorbonne}{France}{Master 2 Recherche}{2014--2015}
 %    \begin{itemize}
 %    	\resitem{Empirical \& Theoretical Economics (APE at present)}
 %    \end{itemize}
     
-  \item \ressubheading{National Research University -- Higher School of Economics (HSE)}{Russia}{B.Sc., M.Sc.}{2009--2015}
+  \item \ressubheading{National Research University -- Higher School of Economics (HSE)}{Russie}{B.Sc., M.Sc.}{2009--2015}
 %    
 %    \begin{itemize}
 %    	\resitem{Specialization: Macroeconomic modelling and macroeconomic policy}
@@ -154,46 +154,52 @@ Ecole des Ponts ParisTech / CIRED: 45bis Av. de la Belle Gabrielle, 94130 Nogent
 
 \end{itemize}
 
-\resheading{Additional training}
+\resheading{Formation supplémentaire}
 
 \begin{itemize}
-         \item \ressubheading{Summer school in Banking}{University Pompeu Fabra}{Subjects: Banking Regulation ; Microeconometrics of Banking}{2019}
+         \item \ressubheading{École d'été économie bancaire}{Université Pompeu Fabra}{Subjets : Regulation bancaire ; Microéconométrie bancaire}{2019}
 \end{itemize}
 
-
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\resheading{Research Interests}
-\begin{enumerate}
-\resitem{\textbf{Public Policy}: impact evaluation, redistributive effects.}
-	\resitem{\textbf{Household Finance}: housing, renovation, personal bankruptcy.}
-	\resitem{\textbf{Environment and Energy}: extreme weather events, energy efficiency.}
-\end{enumerate}
+\resheading{Domaines de recherche}
+\begin{itemize}
+ \resitem{\textbf{Banque, finances des ménages}: crédit immobilier, crédit à la consommation, stabilité.}
+	\resitem{\textbf{Politiques publiques
+}: redistribution de long terme, subventions écologiques.}
+	
+ \resitem{\textbf{Économie de l’environnement}: efficacité énergétique, changement climatique.}
+	
+\end{itemize}
 
+\newpage
  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\resheading{Work in progress}
+\resheading{Articles en cours}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{enumerate}
-	\resitem{Intergenerational Redistribution with Endogenous Constraints to Private Debt. \textit{R \& R, Journal of Mathematical Economics}}
-	\resitem{Success and Failure Zero-Interest Green Loans: Evidence from France (with L-G. Giraudet, M. Seg\`{u}) \textit{Submitted}, WP version: \url{https://hal-enpc.archives-ouvertes.fr/hal-03585110}}
-	\resitem{Droughts and housing: impact and risk estimates from credit data}
-	\resitem{Retrofit Subsidy and Energy Consumption: Impact of a Local Program in Paris Region}
-	%\resitem{Interest Rate Restriction Results in Shorter Housing Loans: Evidence from France}
+	\resitem{Zero-Interest Green Loans and Home Energy Retrofits: Evidence from France (with L-G. Giraudet, M. Seg\`{u}) \url{https://enpc.hal.science/hal-03585110v2}}
+	\resitem{Droughts and housing: damage and risk estimates from credit data}
+ 
+ \resitem{Impact of a Local Subsidy Program for Home Energy Retrofit: Evidence from the Essonne Department}
+ 
+	\resitem{Intergenerational Redistribution with Endogenous Constraints to Private Debt \textit{R\&R Journal of Mathematical Economics}}
 	\resitem{Endogenous Debt Constraints and Rational Bubbles in an OLG Growth Model (with B. Wigniolle)} %-- \textit{submitted}
 	%\resitem{Taming the Collectors: Debt Collection Regulation and Household Well-Being in Russia}
 	%\resitem{AI and Financial Intermediation Under Stress: Evidence from Covid-19 Lending in France (with S. Ouerk, V. Saadi, F. Ravasan)}
     \end{enumerate}
 
-\resheading{Teaching experience}
-\textbf{Lecturer:} Macroeconomics (University Paris--1 Path\'{e}on-Sorbonne, M1, fall 2023, fall 2022); 
-Macro/monetary economics (ESCP Europe, Pre-master, spring 2021, spring 2022, spring 2024) \\
-\textbf{Teaching assistant:} Data-based economics (ESCP Europe, M1, spring 2024); Project in econometrics (Paris Sciences et Lettres, Bachelor, spring 2023); 
-Introduction to Econometrics (Paris--1, Bachelor -- Fall 2020);
-Linear Algebra and Multivariate Calculus (Paris--1, Bachelor -- Spring 2019);
-Open Macroeconomics (Paris--1, M1, Fall 2017, 2018, 2019);
-International Monetary Macroeconomics (Paris--1, M1, Spring 2016, 2019, 2020);
-Microeconomics, Macroeconomics tutorials (Paris--1, M1, Fall 2015)
+\resheading{Expérience d'enseignement}
+\begin{itemize}
+  \item \textbf{CM :} Macroéconomie (Paris--1, M1, S1 2022, S1 2023), Macroéconomie monétaire (ESCP Europe, Pre-master, S2 2021, S2 2022, S2 2024), Économie de l'énergie - session éfficacité énergétique (cycle ingénieur ENSTA, S2 2024)
+  \item {
+\textbf{TD :} 
+Introduction à l'économetrie (Paris--1, L3 -- S1 2020); 
+Algèbre linéaire (Paris--1, L2 -- S2 2019); 
+Macroéconomie Monétaire Internationale (Paris--1, M1, S1 2017, 2018, 2019);
+Microéconomie/ Macroéconomie (Paris--1, M1, S1 2015)
+	}
+ \item \textbf{TP :} TP en économetrie (Paris--1, L3 S1 2020), Data-based economics (ESCP, M1 S2 2024)
+ \item \textbf{Encadrement mémoires/projets :} 2 mémoires M1 (Paris-1, S2 2024), 8 projets empiriques (CPES PSL, S2 2023) 
+\end{itemize}
 %\begin{itemize}
 %         \item \ressubheading{Macroeconomics}{Paris-1}{Master-1}{2022/23}
 %         \item \ressubheading{Monetary Economics}{ESCP Europe}{Pre-master}{2020/21, 2021/22}
@@ -204,8 +210,9 @@ Microeconomics, Macroeconomics tutorials (Paris--1, M1, Fall 2015)
 %        \item \ressubheading{Microeconomics, Macroeconomics tutorials}{Paris--1}{Master 1}{2015/16}
 %\end{itemize}
 
- \resheading{Talks}
-  Atlantic Workshop on Energy and Environmental Economics (Isla De la Toja, June 2022);
+ \resheading{Présentations}
+ CIRED seminar (Nogent-sur-Marne, 2024);
+  Atlantic Workshop on Energy and Environmental Economics (Isla de la Toja, 2022);
  Applied Microeconomics Workshop (Rennes, 2022);
  International Symposium on Energy and Finance Issues (Paris 2022);
  Mannheim Mannheim Conference on Energy and the Environment (Mannheim, 2022);
@@ -213,19 +220,20 @@ Microeconomics, Macroeconomics tutorials (Paris--1, M1, Fall 2015)
  French Association for Environmental Economics (Grenoble, 2021); International Symposium on Money, Credit and Banking at Banque de France (Paris, 2021); Financial and Real Interdependencies Conference (Marseille, 2019); International Macroeconomics Workshop of Fondation Banque de France (Paris,  2018); Public Economic Theory -- PET (Hue, 2018);
      XVIII April Conference of HSE (Moscow, Russia, 2017);
        OLG Days (Luxembourg, 2016);
-         Public Economic Theory -- PET (Rio de Janeiro,  2016)
-         %; Russian Reporter's Summer School (Moscow, 2015)
+         Public Economic Theory -- PET (Rio de Janeiro,  2016);
+       Letnyaya Shkola / Summer School (Moscow, 2015)
 
-\resheading{IT skills}
+\resheading{Compétences informatiques}
 
-    \textbf{General}: Windows, Mac OS, Linux Debian, MS Office; \\
-	\textbf{Scientific, data} (descending proficiency): R, Python, Matlab, Stata,  QGIS, Mathematica, SAS; \\
-	\textbf{Programming}:  Python, bash, C, git; \\
-    \textbf{Presentation}: \LaTeX, Markdown, Jupyter, pandoc, Photoshop, audio/video editing. 
+    \textbf{Général}: Windows, Mac OS, Linux Debian, MS Office; \\
+	\textbf{Scientifique, données} : R, Python, Matlab, Stata, Mathematica, QGIS; \\
+	\textbf{Programmation}:  Python, bash, C, git; \\
+    \textbf{Présentation}: \LaTeX, Quarto, Markdown, Jupyter, pandoc. 
 
-\resheading{Languages}
+\newpage
+\resheading{Langues}
 
-\textbf{English}: Advanced, IELTS Academic 7.5 (2012); \\ \textbf{French}: Advanced, DFP Affaires B2 (2013); \\ \textbf{German}: Intermediate, DAF B1 (2017); \\ \textbf{Russian}: native. 
+\textbf{Anglais}: Advancé, IELTS Academic 7.5 (2012); \\ \textbf{Français}: Advancé, DFP Affaires B2 (2013); \\ \textbf{Allemand}: Intermediaire, DAF B1 (2017); \\ \textbf{Russe}: langue maternelle. 
 
 
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -233,22 +241,20 @@ Microeconomics, Macroeconomics tutorials (Paris--1, M1, Fall 2015)
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\resheading{Awards, Grants, misc.}
+\resheading{Prix, financements, divers}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{itemize}
-  \item \ilyaheading{Policy evaluation grant of regional council of Essonne -- contributor  to project proposal \\ with L-G. Giraudet and SMASH}{2023} 
-  \item \ilyaheading{ADEME ClimFi (Climate Finance) research grant -- contributor to grant application \\ 3-year project BALOCLI (Banks, Housing and Climate), with L-G. Giraudet}{2022-2024} 
+  \item \ilyaheading{Appel à projets ADEME ClimFi (Climate Finance) -- contribution à la propositon de projet ;\\ project de 3 ans BALOCLI (Banks, Housing and Climate), avec L-G. Giraudet (CIRED)}{2022-} 
   %\item \ilyaheading{ADEME ClimFi grant FRITE -- post-doctoral researcher}{2021-2022}
   %\item \ilyaheading{Research grant from Paris Laboratory of Experimental Economics (suspended)}{2016}
-  \item \ilyaheading{Erasmus Mundus Doctorate (EDEEM) Fellowship}{2015}
-  \item \ilyaheading{Russian state medal of excellence in secondary education}{2009}
+  \item \ilyaheading{bourse Erasmus Mundus Doctorate (EDEEM) }{2015}
+  \item \ilyaheading{médaille d'excellence aux études secondaires}{2009}
 \end{itemize}
 %	\multicolumn{2}{c}{Erasmus Mundus Doctorate (EDEEM) Fellowship \cftdotfill{\cftdotsep} 2015}\\
 		%\multicolumn{2}{c}{Medal of excellence in secondary education \cftdotfill{\cftdotsep} 2009}\\		
 \vspace{10 pt}
 
-\textbf{Hobbies:} Music: improvisation and composition; martial arts.
-
+\textbf{Hobbies:} Musique: improvisation, composition; sports de combat.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % \resheading{Current projects description}
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -282,14 +288,14 @@ Microeconomics, Macroeconomics tutorials (Paris--1, M1, Fall 2015)
 % \textbf{Taming the Collectors: Debt Collection Regulation and Consumer Well-Being in Russia}
 %
 % Consumer credit can be costly in non-monetary terms if debt collection is involved. In case of loose legal protection of borrower rights, consumers might experience aggression and threats when dealing with formal and informal debt collection institutions. I study the impact of a major reform of debt collection regulation on borrowers' well-being in Russia. The reform has expanded borrower rights in their interactions with collectors. I implement a difference-in-difference strategy with an annual household survey data where the treatment group is defined by having unsecured consumer debts at the time of the reform announcement. Several self-reported proxies for household for well-being are used as outcome variables. I find that alcohol and tobacco consumption decrease for two years following the reform.         
-\resheading{References}
-~ \\
+
+\resheading{Références}
 ~ \\
 ~ \\
 \begin{tabular}{lr}
 % Referee 1
 $\bullet$ \begin{minipage}[t]{0.45\textwidth}
-Prof.\ Bertrand Wigniolle\\
+Bertrand Wigniolle\\
 Paris Schoool of Economics\\
 48 boulevard Jourdan\\
 Paris 75014\\
@@ -298,13 +304,12 @@ Paris 75014\\
 & \hspace{4cm}
 % Referee 2
 $\bullet$ \begin{minipage}[t]{0.45\textwidth}
-Prof.\ Hippolyte D'Albis\\
+Hippolyte D'Albis\\
 Paris Schoool of Economics\\
 48 boulevard Jourdan\\
 Paris 75014\\
 \href{mailto:hippolyte.dalbis@psemail.eu}{hippolyte.dalbis@psemail.eu}
 \end{minipage}
-\\ &
 \\ &
 \\ & 
 \\
